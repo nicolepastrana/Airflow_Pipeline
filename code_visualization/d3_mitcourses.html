@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+		<title>D3: MIT Courses</title>
+		<script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+		<style type="text/css">	
+		</style>
+</head>
+<body>
+	<script type="text/javascript">
+
+dataset = {"children":[
+    {
+        "WORDS": "Engineering",
+        "COUNT": 347
+    },
+    {
+        "WORDS": "Special",
+        "COUNT": 291
+    },
+    {
+        "WORDS": "Design",
+        "COUNT": 222
+    },
+    {
+        "WORDS": "Seminar",
+        "COUNT": 221
+    },
+    {
+        "WORDS": "Subject",
+        "COUNT": 215
+    },
+    {
+        "WORDS": "Introduction",
+        "COUNT": 173
+    },
+    {
+        "WORDS": "Systems",
+        "COUNT": 167
+    },
+    {
+        "WORDS": "Science",
+        "COUNT": 150
+    },
+    {
+        "WORDS": "Advanced",
+        "COUNT": 144
+    },
+    {
+        "WORDS": "Research",
+        "COUNT": 119
+    },
+    {
+        "WORDS": "Materials",
+        "COUNT": 118
+    },
+    {
+        "WORDS": "Topics",
+        "COUNT": 106
+    },
+    {
+        "WORDS": "Management",
+        "COUNT": 105
+    },
+    {
+        "WORDS": "Physics",
+        "COUNT": 100
+    },
+    {
+        "WORDS": "Theory",
+        "COUNT": 94
+    },
+    {
+        "WORDS": "Economics",
+        "COUNT": 85
+    },
+    {
+        "WORDS": "Biology",
+        "COUNT": 84
+    },
+    {
+        "WORDS": "Analysis",
+        "COUNT": 83
+    },
+    {
+        "WORDS": "Energy",
+        "COUNT": 80
+    },
+    {
+        "WORDS": "Development",
+        "COUNT": 76
+    },
+    {
+        "WORDS": "Architecture",
+        "COUNT": 76
+    },
+    {
+        "WORDS": "Environmental",
+        "COUNT": 76
+    },
+    {
+        "WORDS": "Technology",
+        "COUNT": 75
+    },
+    {
+        "WORDS": "Undergraduate",
+        "COUNT": 73
+    },
+    {
+        "WORDS": "Urban",
+        "COUNT": 71
+    },
+    {
+        "WORDS": "Policy",
+        "COUNT": 71
+    },
+    {
+        "WORDS": "Independent",
+        "COUNT": 68
+    },
+    {
+        "WORDS": "Study",
+        "COUNT": 68
+    },
+    {
+        "WORDS": "Chemistry",
+        "COUNT": 66
+    },
+    {
+        "WORDS": "Principles",
+        "COUNT": 63
+    },
+    {
+        "WORDS": "Mechanics",
+        "COUNT": 61
+    },
+    {
+        "WORDS": "Mechanical",
+        "COUNT": 60
+    },
+    {
+        "WORDS": "Dynamics",
+        "COUNT": 59
+    },
+    {
+        "WORDS": "Graduate",
+        "COUNT": 56
+    },
+    {
+        "WORDS": "Data",
+        "COUNT": 56
+    },
+    {
+        "WORDS": "Art",
+        "COUNT": 56
+    },
+    {
+        "WORDS": "Global",
+        "COUNT": 55
+    },
+    {
+        "WORDS": "Methods",
+        "COUNT": 54
+    },
+    {
+        "WORDS": "Molecular",
+        "COUNT": 54
+    },
+    {
+        "WORDS": "Biological",
+        "COUNT": 53
+    },
+    {
+        "WORDS": "Learning",
+        "COUNT": 52
+    },
+    {
+        "WORDS": "Computational",
+        "COUNT": 51
+    },
+    {
+        "WORDS": "Thesis",
+        "COUNT": 51
+    },
+    {
+        "WORDS": "Nuclear",
+        "COUNT": 50
+    },
+    {
+        "WORDS": "Studies",
+        "COUNT": 49
+    },
+    {
+        "WORDS": "Practice",
+        "COUNT": 48
+    },
+    {
+        "WORDS": "Modeling",
+        "COUNT": 47
+    },
+    {
+        "WORDS": "Chemical",
+        "COUNT": 47
+    },
+    {
+        "WORDS": "Planning",
+        "COUNT": 46
+    },
+    {
+        "WORDS": "Control",
+        "COUNT": 45
+    },
+    {
+        "WORDS": "Laboratory",
+        "COUNT": 45
+    },
+    {
+        "WORDS": "Innovation",
+        "COUNT": 44
+    },
+    {
+        "WORDS": "Finance",
+        "COUNT": 44
+    },
+    {
+        "WORDS": "Computation",
+        "COUNT": 43
+    },
+    {
+        "WORDS": "Applications",
+        "COUNT": 39
+    },
+    {
+        "WORDS": "Fundamentals",
+        "COUNT": 39
+    },
+    {
+        "WORDS": "Climate",
+        "COUNT": 37
+    },
+    {
+        "WORDS": "Leadership",
+        "COUNT": 36
+    },
+    {
+        "WORDS": "History",
+        "COUNT": 36
+    },
+    {
+        "WORDS": "Experience",
+        "COUNT": 36
+    },
+    {
+        "WORDS": "Sciences",
+        "COUNT": 36
+    },
+    {
+        "WORDS": "Real",
+        "COUNT": 36
+    },
+    {
+        "WORDS": "Applied",
+        "COUNT": 34
+    },
+    {
+        "WORDS": "Modern",
+        "COUNT": 33
+    },
+    {
+        "WORDS": "Law",
+        "COUNT": 33
+    },
+    {
+        "WORDS": "Strategy",
+        "COUNT": 32
+    },
+    {
+        "WORDS": "Lab",
+        "COUNT": 32
+    },
+    {
+        "WORDS": "Analytics",
+        "COUNT": 32
+    },
+    {
+        "WORDS": "Brain",
+        "COUNT": 31
+    },
+    {
+        "WORDS": "Cognitive",
+        "COUNT": 31
+    },
+    {
+        "WORDS": "Business",
+        "COUNT": 31
+    },
+    {
+        "WORDS": "Sustainable",
+        "COUNT": 31
+    },
+    {
+        "WORDS": "Estate",
+        "COUNT": 30
+    },
+    {
+        "WORDS": "Communication",
+        "COUNT": 29
+    },
+    {
+        "WORDS": "Atmospheric",
+        "COUNT": 29
+    },
+    {
+        "WORDS": "Machine",
+        "COUNT": 29
+    },
+    {
+        "WORDS": "Structural",
+        "COUNT": 29
+    },
+    {
+        "WORDS": "Quantum",
+        "COUNT": 29
+    },
+    {
+        "WORDS": "Workshop",
+        "COUNT": 29
+    },
+    {
+        "WORDS": "Public",
+        "COUNT": 28
+    },
+    {
+        "WORDS": "System",
+        "COUNT": 28
+    },
+    {
+        "WORDS": "Economic",
+        "COUNT": 28
+    },
+    {
+        "WORDS": "Information",
+        "COUNT": 28
+    },
+    {
+        "WORDS": "Studio",
+        "COUNT": 28
+    },
+    {
+        "WORDS": "Building",
+        "COUNT": 27
+    },
+    {
+        "WORDS": "Project",
+        "COUNT": 27
+    },
+    {
+        "WORDS": "Mathematics",
+        "COUNT": 27
+    },
+    {
+        "WORDS": "Change",
+        "COUNT": 27
+    },
+    {
+        "WORDS": "Operations",
+        "COUNT": 26
+    },
+    {
+        "WORDS": "Entrepreneurship",
+        "COUNT": 26
+    },
+    {
+        "WORDS": "Optimization",
+        "COUNT": 26
+    },
+    {
+        "WORDS": "Statistical",
+        "COUNT": 26
+    },
+    {
+        "WORDS": "Processes",
+        "COUNT": 25
+    },
+    {
+        "WORDS": "Physical",
+        "COUNT": 25
+    },
+    {
+        "WORDS": "Nonlinear",
+        "COUNT": 25
+    },
+    {
+        "WORDS": "Teaching",
+        "COUNT": 24
+    },
+    {
+        "WORDS": "Fluid",
+        "COUNT": 24
+    },
+    {
+        "WORDS": "Oceanography",
+        "COUNT": 24
+    },
+    {
+        "WORDS": "Current",
+        "COUNT": 24
+    },
+    {
+        "WORDS": "Transportation",
+        "COUNT": 23
+    },
+    {
+        "WORDS": "Planetary",
+        "COUNT": 23
+    },
+    {
+        "WORDS": "Human",
+        "COUNT": 23
+    },
+    {
+        "WORDS": "Cellular",
+        "COUNT": 23
+    },
+    {
+        "WORDS": "Digital",
+        "COUNT": 22
+    },
+    {
+        "WORDS": "Civil",
+        "COUNT": 22
+    },
+    {
+        "WORDS": "Problems",
+        "COUNT": 22
+    },
+    {
+        "WORDS": "Environment",
+        "COUNT": 21
+    },
+    {
+        "WORDS": "Statistics",
+        "COUNT": 21
+    },
+    {
+        "WORDS": "Computer",
+        "COUNT": 21
+    },
+    {
+        "WORDS": "Structure",
+        "COUNT": 21
+    },
+    {
+        "WORDS": "Models",
+        "COUNT": 21
+    },
+    {
+        "WORDS": "Markets",
+        "COUNT": 21
+    },
+    {
+        "WORDS": "Corporate",
+        "COUNT": 20
+    },
+    {
+        "WORDS": "Engineers",
+        "COUNT": 20
+    },
+    {
+        "WORDS": "Financial",
+        "COUNT": 20
+    },
+    {
+        "WORDS": "Field",
+        "COUNT": 20
+    },
+    {
+        "WORDS": "Differential",
+        "COUNT": 20
+    },
+    {
+        "WORDS": "Media",
+        "COUNT": 19
+    },
+    {
+        "WORDS": "Radiation",
+        "COUNT": 19
+    },
+    {
+        "WORDS": "Marine",
+        "COUNT": 19
+    },
+    {
+        "WORDS": "Computing",
+        "COUNT": 19
+    },
+    {
+        "WORDS": "Cities",
+        "COUNT": 19
+    },
+    {
+        "WORDS": "Sustainability",
+        "COUNT": 19
+    },
+    {
+        "WORDS": "Power",
+        "COUNT": 19
+    },
+    {
+        "WORDS": "City",
+        "COUNT": 18
+    },
+    {
+        "WORDS": "Earth",
+        "COUNT": 18
+    },
+    {
+        "WORDS": "Transport",
+        "COUNT": 18
+    },
+    {
+        "WORDS": "International",
+        "COUNT": 18
+    },
+    {
+        "WORDS": "Processing",
+        "COUNT": 18
+    },
+    {
+        "WORDS": "Culture",
+        "COUNT": 18
+    },
+    {
+        "WORDS": "Geophysics",
+        "COUNT": 18
+    },
+    {
+        "WORDS": "Probability",
+        "COUNT": 17
+    },
+    {
+        "WORDS": "Geology",
+        "COUNT": 17
+    },
+    {
+        "WORDS": "Techniques",
+        "COUNT": 17
+    },
+    {
+        "WORDS": "Experimental",
+        "COUNT": 17
+    },
+    {
+        "WORDS": "Architectural",
+        "COUNT": 17
+    },
+    {
+        "WORDS": "Manufacturing",
+        "COUNT": 17
+    },
+    {
+        "WORDS": "UR",
+        "COUNT": 17
+    },
+    {
+        "WORDS": "Preparation",
+        "COUNT": 17
+    },
+    {
+        "WORDS": "THG",
+        "COUNT": 17
+    },
+    {
+        "WORDS": "Neural",
+        "COUNT": 16
+    },
+    {
+        "WORDS": "Thermodynamics",
+        "COUNT": 16
+    },
+    {
+        "WORDS": "Ventures",
+        "COUNT": 16
+    },
+    {
+        "WORDS": "Politics",
+        "COUNT": 16
+    },
+    {
+        "WORDS": "Economy",
+        "COUNT": 16
+    },
+    {
+        "WORDS": "Organizational",
+        "COUNT": 16
+    },
+    {
+        "WORDS": "Entrepreneurial",
+        "COUNT": 16
+    },
+    {
+        "WORDS": "UPOP",
+        "COUNT": 16
+    },
+    {
+        "WORDS": "Thinking",
+        "COUNT": 15
+    },
+    {
+        "WORDS": "Selected",
+        "COUNT": 15
+    },
+    {
+        "WORDS": "Geometry",
+        "COUNT": 15
+    },
+    {
+        "WORDS": "Equations",
+        "COUNT": 15
+    },
+    {
+        "WORDS": "Projects",
+        "COUNT": 15
+    },
+    {
+        "WORDS": "Strategic",
+        "COUNT": 15
+    },
+    {
+        "WORDS": "Space",
+        "COUNT": 15
+    },
+    {
+        "WORDS": "Neuroscience",
+        "COUNT": 15
+    },
+    {
+        "WORDS": "Numerical",
+        "COUNT": 15
+    },
+    {
+        "WORDS": "Mathematical",
+        "COUNT": 15
+    },
+    {
+        "WORDS": "Complex",
+        "COUNT": 14
+    },
+    {
+        "WORDS": "Skills",
+        "COUNT": 14
+    },
+    {
+        "WORDS": "URG",
+        "COUNT": 14
+    },
+    {
+        "WORDS": "Ocean",
+        "COUNT": 14
+    },
+    {
+        "WORDS": "Making",
+        "COUNT": 14
+    },
+    {
+        "WORDS": "Microbiology",
+        "COUNT": 14
+    },
+    {
+        "WORDS": "Evolution",
+        "COUNT": 14
+    },
+    {
+        "WORDS": "Industrial",
+        "COUNT": 14
+    },
+    {
+        "WORDS": "Product",
+        "COUNT": 13
+    },
+    {
+        "WORDS": "Essentials",
+        "COUNT": 13
+    },
+    {
+        "WORDS": "Optical",
+        "COUNT": 13
+    },
+    {
+        "WORDS": "Leading",
+        "COUNT": 13
+    },
+    {
+        "WORDS": "Teams",
+        "COUNT": 13
+    },
+    {
+        "WORDS": "Foundations",
+        "COUNT": 13
+    },
+    {
+        "WORDS": "Algorithms",
+        "COUNT": 13
+    },
+    {
+        "WORDS": "Social",
+        "COUNT": 13
+    },
+    {
+        "WORDS": "Criticism",
+        "COUNT": 13
+    },
+    {
+        "WORDS": "Stochastic",
+        "COUNT": 13
+    },
+    {
+        "WORDS": "Biotechnology",
+        "COUNT": 13
+    },
+    {
+        "WORDS": "Networks",
+        "COUNT": 13
+    },
+    {
+        "WORDS": "Practical",
+        "COUNT": 13
+    },
+    {
+        "WORDS": "Housing",
+        "COUNT": 13
+    },
+    {
+        "WORDS": "Negotiation",
+        "COUNT": 13
+    },
+    {
+        "WORDS": "Marketing",
+        "COUNT": 13
+    },
+    {
+        "WORDS": "Political",
+        "COUNT": 13
+    },
+    {
+        "WORDS": "Organic",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Geochemistry",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "THU",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Aerospace",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Organizations",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Technologies",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Urbanism",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Future",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Circuits",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Machines",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Plasma",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Genetics",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "SS",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Ethics",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Partial",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Water",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Tissue",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Programming",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Urbanization",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Algebraic",
+        "COUNT": 12
+    },
+    {
+        "WORDS": "Devices",
+        "COUNT": 11
+    },
+    {
+        "WORDS": "Tools",
+        "COUNT": 11
+    },
+    {
+        "WORDS": "Society",
+        "COUNT": 11
+    },
+    {
+        "WORDS": "Flows",
+        "COUNT": 11
+    },
+    {
+        "WORDS": "Internship",
+        "COUNT": 11
+    },
+    {
+        "WORDS": "Cell",
+        "COUNT": 11
+    },
+    {
+        "WORDS": "DLab",
+        "COUNT": 11
+    },
+    {
+        "WORDS": "Conversion",
+        "COUNT": 11
+    },
+    {
+        "WORDS": "Life",
+        "COUNT": 11
+    },
+    {
+        "WORDS": "Structures",
+        "COUNT": 11
+    },
+    {
+        "WORDS": "Ecology",
+        "COUNT": 11
+    },
+    {
+        "WORDS": "Action",
+        "COUNT": 11
+    },
+    {
+        "WORDS": "Algebra",
+        "COUNT": 11
+    },
+    {
+        "WORDS": "Behavior",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "Matter",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "Topology",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "Simulation",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "Drug",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "Inference",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "Accounting",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "Reactor",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "Core",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "Aeronautics",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "Health",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "Supply",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "People",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "Professional",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "Astronautics",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "Astrophysics",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "Measurement",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "Biomechanics",
+        "COUNT": 10
+    },
+    {
+        "WORDS": "Propulsion",
+        "COUNT": 10
+    }
+]};
+        var diameter = 600;
+        var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+        var bubble = d3.pack(dataset)
+            .size([diameter, diameter])
+            .padding(1.5);
+
+        var svg = d3.select("body")
+            .append("svg")
+            .attr("width", diameter)
+            .attr("height", diameter)
+            .attr("class", "bubble");
+
+        var nodes = d3.hierarchy(dataset)
+            .sum(function(d) { return d.COUNT; });
+
+        var node = svg.selectAll(".node")
+            .data(bubble(nodes).descendants())
+            .enter()
+            .filter(function(d){
+                return  !d.children
+            })
+            .append("g")
+            .attr("class", "node")
+            .attr("transform", function(d) {
+                return "translate(" + d.x + "," + d.y + ")";
+            });
+
+
+        node.append("circle")
+            .attr("r", function(d) {
+                return d.r;
+            })
+            .style("fill", function(d,i) {
+                return color(i);
+            });
+
+        node.append("text")
+            .attr("dy", ".2em")
+            .style("text-anchor", "middle")
+            .text(function(d) {
+                return d.data.WORDS.substring(0, d.r / 3);
+            })
+            .attr("font-family", "sans-serif")
+            .attr("font-size", function(d){
+                return d.r/5;
+            })
+            .attr("fill", "white");
+
+        node.append("text")
+            .attr("dy", "1.3em")
+            .style("text-anchor", "middle")
+            .text(function(d) {
+                return d.data.COUNT;
+            })
+            .attr("font-family",  "Gill Sans", "Gill Sans MT")
+            .attr("font-size", function(d){
+                return d.r/5;
+            })
+            .attr("fill", "white");
+
+        d3.select(self.frameElement)
+            .style("height", diameter + "px");
+
+
+
+	</script>
+</body>
+</html>

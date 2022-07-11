@@ -1,0 +1,114 @@
+[2022-07-10 23:03:40,892] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: assignment.task_one 2022-07-09T00:00:00+00:00 [queued]>
+[2022-07-10 23:03:41,038] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: assignment.task_one 2022-07-09T00:00:00+00:00 [queued]>
+[2022-07-10 23:03:41,042] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-10 23:03:41,045] {taskinstance.py:1088} INFO - Starting attempt 2 of 2
+[2022-07-10 23:03:41,050] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-10 23:03:41,125] {taskinstance.py:1107} INFO - Executing <Task(PythonOperator): task_one> on 2022-07-09T00:00:00+00:00
+[2022-07-10 23:03:41,134] {standard_task_runner.py:52} INFO - Started process 3073 to run task
+[2022-07-10 23:03:41,146] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'assignment', 'task_one', '2022-07-09T00:00:00+00:00', '--job-id', '4', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/assignment.py', '--cfg-path', '/tmp/tmp4f1p82e7', '--error-file', '/tmp/tmpgez45f_5']
+[2022-07-10 23:03:41,150] {standard_task_runner.py:77} INFO - Job 4: Subtask task_one
+[2022-07-10 23:03:41,479] {logging_mixin.py:104} INFO - Running <TaskInstance: assignment.task_one 2022-07-09T00:00:00+00:00 [running]> on host c259055947c2
+[2022-07-10 23:03:41,977] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=assignment
+AIRFLOW_CTX_TASK_ID=task_one
+AIRFLOW_CTX_EXECUTION_DATE=2022-07-09T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-07-09T00:00:00+00:00
+[2022-07-10 23:03:43,061] {logging_mixin.py:104} INFO - wrote file: m1a.html
+[2022-07-10 23:03:43,064] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:03:58,569] {logging_mixin.py:104} INFO - wrote file: m1b.html
+[2022-07-10 23:03:58,575] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:04:14,265] {logging_mixin.py:104} INFO - wrote file: m1c.html
+[2022-07-10 23:04:14,271] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:04:29,889] {logging_mixin.py:104} INFO - wrote file: m2a.html
+[2022-07-10 23:04:29,898] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:04:45,620] {logging_mixin.py:104} INFO - wrote file: m2b.html
+[2022-07-10 23:04:45,627] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:05:01,256] {logging_mixin.py:104} INFO - wrote file: m2c.html
+[2022-07-10 23:05:01,261] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:05:16,951] {logging_mixin.py:104} INFO - wrote file: m3a.html
+[2022-07-10 23:05:16,957] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:05:32,496] {logging_mixin.py:104} INFO - wrote file: m3b.html
+[2022-07-10 23:05:32,501] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:05:48,162] {logging_mixin.py:104} INFO - wrote file: m4a.html
+[2022-07-10 23:05:48,166] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:06:03,732] {logging_mixin.py:104} INFO - wrote file: m4b.html
+[2022-07-10 23:06:03,736] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:06:19,250] {logging_mixin.py:104} INFO - wrote file: m4c.html
+[2022-07-10 23:06:19,257] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:06:34,743] {logging_mixin.py:104} INFO - wrote file: m4d.html
+[2022-07-10 23:06:34,749] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:06:50,223] {logging_mixin.py:104} INFO - wrote file: m4e.html
+[2022-07-10 23:06:50,227] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:07:05,769] {logging_mixin.py:104} INFO - wrote file: m4f.html
+[2022-07-10 23:07:05,779] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:07:21,189] {logging_mixin.py:104} INFO - wrote file: m4g.html
+[2022-07-10 23:07:21,200] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:07:36,768] {logging_mixin.py:104} INFO - wrote file: m5a.html
+[2022-07-10 23:07:36,777] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:07:52,336] {logging_mixin.py:104} INFO - wrote file: m5b.html
+[2022-07-10 23:07:52,345] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:08:07,958] {logging_mixin.py:104} INFO - wrote file: m6a.html
+[2022-07-10 23:08:07,961] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:08:23,504] {logging_mixin.py:104} INFO - wrote file: m6b.html
+[2022-07-10 23:08:23,514] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:08:39,116] {logging_mixin.py:104} INFO - wrote file: m6c.html
+[2022-07-10 23:08:39,124] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:08:54,846] {logging_mixin.py:104} INFO - wrote file: m7a.html
+[2022-07-10 23:08:54,853] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:09:10,411] {logging_mixin.py:104} INFO - wrote file: m8a.html
+[2022-07-10 23:09:10,416] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:09:25,992] {logging_mixin.py:104} INFO - wrote file: m8b.html
+[2022-07-10 23:09:25,998] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:09:41,538] {logging_mixin.py:104} INFO - wrote file: m9a.html
+[2022-07-10 23:09:41,543] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:09:57,277] {logging_mixin.py:104} INFO - wrote file: m9b.html
+[2022-07-10 23:09:57,302] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:10:13,002] {logging_mixin.py:104} INFO - wrote file: m10a.html
+[2022-07-10 23:10:13,010] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:10:28,565] {logging_mixin.py:104} INFO - wrote file: m10b.html
+[2022-07-10 23:10:28,572] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:10:44,396] {logging_mixin.py:104} INFO - wrote file: m11a.html
+[2022-07-10 23:10:44,405] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:10:59,909] {logging_mixin.py:104} INFO - wrote file: m11b.html
+[2022-07-10 23:10:59,918] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:11:15,729] {logging_mixin.py:104} INFO - wrote file: m11c.html
+[2022-07-10 23:11:15,741] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:11:31,388] {logging_mixin.py:104} INFO - wrote file: m12a.html
+[2022-07-10 23:11:31,391] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:11:46,928] {logging_mixin.py:104} INFO - wrote file: m12b.html
+[2022-07-10 23:11:46,938] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:12:02,559] {logging_mixin.py:104} INFO - wrote file: m12c.html
+[2022-07-10 23:12:02,565] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:12:18,153] {logging_mixin.py:104} INFO - wrote file: m14a.html
+[2022-07-10 23:12:18,158] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:12:33,766] {logging_mixin.py:104} INFO - wrote file: m14b.html
+[2022-07-10 23:12:33,774] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:12:49,459] {logging_mixin.py:104} INFO - wrote file: m15a.html
+[2022-07-10 23:12:49,468] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:13:05,351] {logging_mixin.py:104} INFO - wrote file: m15b.html
+[2022-07-10 23:13:05,356] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:13:21,153] {logging_mixin.py:104} INFO - wrote file: m15c.html
+[2022-07-10 23:13:21,156] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:13:36,726] {logging_mixin.py:104} INFO - wrote file: m16a.html
+[2022-07-10 23:13:36,731] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:13:52,344] {logging_mixin.py:104} INFO - wrote file: m16b.html
+[2022-07-10 23:13:52,350] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:14:08,034] {logging_mixin.py:104} INFO - wrote file: m18a.html
+[2022-07-10 23:14:08,037] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:14:23,599] {logging_mixin.py:104} INFO - wrote file: m18b.html
+[2022-07-10 23:14:23,604] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:14:39,245] {logging_mixin.py:104} INFO - wrote file: m20a.html
+[2022-07-10 23:14:39,256] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:14:54,795] {logging_mixin.py:104} INFO - wrote file: m22a.html
+[2022-07-10 23:14:54,799] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:15:10,229] {logging_mixin.py:104} INFO - wrote file: m22b.html
+[2022-07-10 23:15:10,234] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:15:25,711] {logging_mixin.py:104} INFO - wrote file: m22c.html
+[2022-07-10 23:15:25,715] {logging_mixin.py:104} INFO - --- reading... ---
+[2022-07-10 23:15:40,739] {python.py:151} INFO - Done. Returned value was: None
+[2022-07-10 23:15:40,875] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=assignment, task_id=task_one, execution_date=20220709T000000, start_date=20220710T230340, end_date=20220710T231540
+[2022-07-10 23:15:41,177] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-07-10 23:15:41,236] {local_task_job.py:151} INFO - Task exited with return code 0
